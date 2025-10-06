@@ -2,6 +2,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshStandardMaterial } from "three";
 import "./App.css";
 import { useRef } from "react";
+import RotationMaterial from "./components/RotationMaterial";
+import AxisHelper from "./components/AxisHelper";
+import GizmosHelper from "./components/GizmosHelper";
+import LightControl from "./components/LightControl";
+import LightWithHelper from "./components/LightWithHelper";
+import ShadowControl from "./components/ShadowControl";
 
 function AnimatedBox() {
   const boxRef = useRef();
@@ -23,27 +29,14 @@ function AnimatedBox() {
 
 function App() {
   return (
-    <Canvas camera={{ position: [5, 5, 5] }}>
-      {/* <mesh>
-        <sphereGeometry args={[3, 80, 80]} />
-        <meshBasicMaterial wireframe color="black" />
-      </mesh> */}
-
-      {/* <mesh>
-        <boxGeometry args={[2, 3, 2]} />
-        <meshStandardMaterial color={0x00bfff}/>
-      </mesh>
-      <directionalLight position={[2, 5, 1]}  /> */}
-
-      {/* <mesh rotation={[Math.PI / 2, 0, 0]}>
-        <torusKnotGeometry args={[1.7, 0.3, 256, 256]} />
-        <meshToonMaterial color={0x00bfff} />
-      </mesh>
-      <directionalLight position={[4, 2, 3]} /> */}
-
-      <AnimatedBox />
-      <directionalLight position={[4, 2, 3]} />
-    </Canvas>
+    <>
+      {/* <RotationMaterial /> */}
+      {/* <AxisHelper /> */}
+      {/* <GizmosHelper /> */}
+      {/* <LightControl /> */}
+      {/* <LightWithHelper /> */}
+      <ShadowControl />
+    </>
   );
 }
 

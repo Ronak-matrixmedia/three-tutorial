@@ -1,4 +1,4 @@
-import { FirstPersonControls } from "@react-three/drei";
+import { FirstPersonControls, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
@@ -23,10 +23,8 @@ function AnimatedBox() {
 function RotationMaterial() {
   return (
     <Canvas camera={{ position: [4, 4, 4] }}>
-      <FirstPersonControls movementSpeed={0.3} autoForward={true} />
-      <gridHelper args={[20, 20]} />
-      <axesHelper args={[10]} />
-      {/* {/* <OrbitControls /> */}
+      {/* <FirstPersonControls /> */}
+      <OrbitControls />
       <AnimatedBox />
       <directionalLight position={[4, 2, 3]} />
     </Canvas>
