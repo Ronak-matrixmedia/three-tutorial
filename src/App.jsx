@@ -8,6 +8,7 @@ import GizmosHelper from "./components/GizmosHelper";
 import LightControl from "./components/LightControl";
 import LightWithHelper from "./components/LightWithHelper";
 import ShadowControl from "./components/ShadowControl";
+import OceanSkills from "./components/oceanSkills";
 
 function AnimatedBox() {
   const boxRef = useRef();
@@ -35,7 +36,8 @@ function App() {
       {/* <GizmosHelper /> */}
       {/* <LightControl /> */}
       {/* <LightWithHelper /> */}
-      <ShadowControl />
+      {/* <ShadowControl /> */}
+      <OceanSkills />
     </>
   );
 }
