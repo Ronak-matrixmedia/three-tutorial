@@ -12,11 +12,9 @@ import {
   Html,
   OrbitControls,
   Sky,
-  Clouds,
-  Cloud,
-  CameraControls,
+  Text3D,
+  Center,
   Sky as SkyImpl,
-  StatsGl,
 } from "@react-three/drei";
 
 import { Water } from "three-stdlib";
@@ -24,6 +22,30 @@ import { Water } from "three-stdlib";
 extend({ Water });
 
 const skills = ["React", "MongoDB", "ES6+", "Node.js", "Redux", "Git"];
+
+function TextJs() {
+  
+  return (
+    <>
+      <Center rotation={[-0.2, -0.25, 0]}>
+        <Text3D
+          curveSegments={32}
+          bevelEnabled
+          bevelSize={0.04}
+          bevelThickness={0.1}
+          height={0.5}
+          lineHeight={0.5}
+          letterSpacing={-0.06}
+          size={1.5}
+          font="/Inter_Bold.json"
+        >
+          {`JS`}
+          <meshNormalMaterial />
+        </Text3D>
+      </Center>
+    </>
+  );
+}
 
 function Ocean() {
   const ref = useRef();
@@ -56,14 +78,28 @@ function Box() {
   useFrame((state, delta) => {
     ref.current.position.y = 10 + Math.sin(state.clock.elapsedTime) * 20;
     ref.current.rotation.x =
-      ref.current.rotation.y =
-      ref.current.rotation.z +=
         delta;
   });
   return (
     <mesh ref={ref} scale={20}>
-      <boxGeometry />
-      <meshStandardMaterial />
+      {/* <boxGeometry />
+      <meshStandardMaterial /> */}
+      <Center rotation={[-0.2, -0.25, 0]}>
+        <Text3D
+          curveSegments={32}
+          bevelEnabled
+          bevelSize={0.04}
+          bevelThickness={0.1}
+          height={0.5}
+          lineHeight={0.5}
+          letterSpacing={-0.06}
+          size={1.5}
+          font="/Inter_Bold.json"
+        >
+          {`JS`}
+          <meshNormalMaterial />
+        </Text3D>
+      </Center>
     </mesh>
   );
 }

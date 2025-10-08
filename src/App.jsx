@@ -9,6 +9,7 @@ import LightControl from "./components/LightControl";
 import LightWithHelper from "./components/LightWithHelper";
 import ShadowControl from "./components/ShadowControl";
 import OceanSkills from "./components/oceanSkills";
+import ThreeDText from "./components/ThreeDText";
 
 function AnimatedBox() {
   const boxRef = useRef();
@@ -38,6 +39,7 @@ function App() {
       {/* <LightWithHelper /> */}
       {/* <ShadowControl /> */}
       <OceanSkills />
+      {/* <ThreeDText /> */}
     </>
   );
 }
