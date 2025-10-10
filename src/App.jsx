@@ -10,24 +10,7 @@ import LightWithHelper from "./components/LightWithHelper";
 import ShadowControl from "./components/ShadowControl";
 import OceanSkills from "./components/oceanSkills";
 import ThreeDText from "./components/ThreeDText";
-
-function AnimatedBox() {
-  const boxRef = useRef();
-
-  useFrame(() => {
-    // Animation code
-    boxRef.current.rotation.x += 0.005;
-    boxRef.current.rotation.y += 0.005;
-    boxRef.current.rotation.z += 0.005;
-  });
-
-  return (
-    <mesh ref={boxRef}>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color={0x00bfff} />
-    </mesh>
-  );
-}
+import ScrollingDeep from "./components/YogaWebGel/scrollingDeep";
 
 function App() {
   return (
@@ -38,8 +21,9 @@ function App() {
       {/* <LightControl /> */}
       {/* <LightWithHelper /> */}
       {/* <ShadowControl /> */}
-      <OceanSkills />
+      {/* <OceanSkills /> */}
       {/* <ThreeDText /> */}
+      <ScrollingDeep />
     </>
   );
 }
